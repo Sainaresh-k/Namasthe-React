@@ -1,4 +1,4 @@
 function Demo() {
-    console.log('This is Demo function')
+    console.log('This is Demo1 function')
 }
 Demo();
