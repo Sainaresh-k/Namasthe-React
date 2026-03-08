@@ -8,10 +8,17 @@ const Headind2 = () => {
         </h2>
     )
 }
+const Title = (
+    <h3>
+        this is title
+    </h3>
+)
 
 const Heading1 = () => (
     <div>
         <Headind2 />
+        <Headind2></Headind2>
+        {Title}
         <h1 className="heading" tabIndex='5'>
             React: FUNCTIONAL COMPONENT
         </h1>
