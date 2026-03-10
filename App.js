@@ -1104,7 +1104,8 @@ const Header = () => {
     )
 }
 const RestaurantCard = ({ resData }) => {
-    const { name, cloudinaryImageId, avgRating, deliveryTime, cuisines } = resData
+    const { name, cloudinaryImageId, avgRating, cuisines } = resData;
+    const { sla } = resData;
 
 
 
@@ -1121,10 +1122,10 @@ const RestaurantCard = ({ resData }) => {
             />
 
             <div className="res-info">
-                <h3>{name}</h3>
+                <h4>{name}</h4>
                 <h5>{cuisines.join(", ")}</h5>
                 <h5>{avgRating} ⭐</h5>
-                <h5>{deliveryTime} minutes</h5>
+                <h5>{sla.deliveryTime} minutes</h5>
             </div>
 
         </div>
@@ -1132,8 +1133,8 @@ const RestaurantCard = ({ resData }) => {
 };
 const Body = () => {
     const restaurants = resList[0].data.cards
-        .filter(item => item.card.card.info)
-        .map(item => item.card.card.info)
+        .filter(item => item?.card?.card.info)
+        .map(item => item?.card?.card.info)
     console.log(restaurants)
 
     return (

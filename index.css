@@ -52,11 +52,11 @@
     object-fit: cover;
 }
 
-.res-info h3{
+.res-info h4{
     margin:5px 0;
     font-size:18px;
 }
-.res-info h4{
+.res-info h5{
     margin: 2px 0;
     font-size: 14px;
 }
