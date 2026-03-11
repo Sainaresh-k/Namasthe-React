@@ -60,3 +60,22 @@
     margin: 2px 0;
     font-size: 14px;
 }
+.filter-btn{
+    background-color: rgb(234, 177, 156);
+    color: black;
+    cursor: pointer;
+    margin: 5px;
+    border-color: rgb(22, 22, 24);
+    border-radius:8px ;
+    transition: background-color 0.3s ease;
+    
+}
+.filter-btn:hover{
+opacity: 0.5;
+background-color: cadetblue;
+
+}
+.filter-btn:active{
+    background-color: darkolivegreen;
+    
+}
