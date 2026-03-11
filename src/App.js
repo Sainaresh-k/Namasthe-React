@@ -1,22 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
 import { jsx } from "react/jsx-runtime";
-/**
- * Header
- *  -Logo
- *  -Nav bar
- * Body
- *  -search
- *  -Restaurant cards
- *     - img
- *     - delivary time
- *     -star rating
- *     -cuisine
- * Footer
- *  -copyright
- *  -address
- *  -contact
- */
+
 const resList = [
     {
         "statusCode": 0,

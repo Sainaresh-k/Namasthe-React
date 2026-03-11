@@ -1,6 +1,20 @@
 # Namasthe React
 
-This project is created while learning React.
+Food Order :This project is created while learning React.
+/\*\*
 
-## Topics
-##Episode:3
+- Header
+- -Logo
+- -Nav bar
+- Body
+- -search
+- -Restaurant cards
+-     - img
+-     - delivary time
+-     -star rating
+-     -cuisine
+- Footer
+- -copyright
+- -address
+- -contact
+  \*/
