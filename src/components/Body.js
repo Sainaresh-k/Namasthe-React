@@ -42,6 +42,7 @@ import RestaurantCard from "./RestaurantCard";
 // export default Body;
 import { useState, useEffect } from "react";
 import RestaurantCard from "./RestaurantCard";
+import Shimmer from './Shimmer'
 
 function Body() {
 
@@ -64,6 +65,9 @@ function Body() {
                 ?.map(item => item?.card?.card?.info);
         setRestaurants(restList);
     };
+    if (restaurants.length === 0) {
+        return <Shimmer />
+    }
 
     return (
         <div className="body">
@@ -73,10 +77,10 @@ function Body() {
                         const filterList = restaurants.filter((resto) => resto.avgRating > 4.2)
                         setRestaurants(filterList)
                     }}>Top Reated Restaureants</button>
-
             </div>
+
             <div className="res-container">
-                {restaurants.length > 0 && restaurants.map((res) => (
+                {restaurants.map((res) => (
                     <RestaurantCard
                         key={res.id}
                         resData={res}
