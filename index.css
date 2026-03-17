@@ -68,7 +68,6 @@
     border-color: rgb(22, 22, 24);
     border-radius:8px ;
     transition: background-color 0.3s ease;
-    
 }
 .filter-btn:hover{
 opacity: 0.5;
@@ -90,4 +89,22 @@ background-color: cadetblue;
     margin: 10px;
 
 
+}
+.btn{
+    background-color: rgb(204, 121, 121);
+    padding: 0 20px;
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    color: white;
+
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.search {
+  display: flex;
+  gap: 10px;
 }
