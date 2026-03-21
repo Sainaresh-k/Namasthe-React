@@ -2,10 +2,10 @@ import RestaurantCard from "./RestaurantCard";
 // import resList from "../utils/mockData"
 // import { useState, useEffect } from "react";
 // const Body = () => {
-    // const restaurantData = resList[0].data.cards
-    //     .filter(item => item?.card?.card.info)
-    //     .map(item => item?.card?.card.info)
-    // const [restaurants, setlistRestaurants] = useState(restaurantData);
+// const restaurantData = resList[0].data.cards
+//     .filter(item => item?.card?.card.info)
+//     .map(item => item?.card?.card.info)
+// const [restaurants, setlistRestaurants] = useState(restaurantData);
 //     const [restaurants, setRestaurants] = useState([]);
 
 //     useEffect(() => {

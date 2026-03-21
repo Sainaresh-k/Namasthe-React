@@ -8,15 +8,15 @@ let fruits = ["apple", "banana", "orange"];
 const App = () => {
     return (
         <div className="app">
-            <ul>
+            {/* <ul>
                 {fruits.map((e) => {
                     return (
                         <li key={e}>{e}</li>
                     )
                 })}
-            </ul>
-            {/* <Header />
-            < Body /> */}
+            </ul> */}
+            <Header />
+            < Body />
         </div>
     )
 }
