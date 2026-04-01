@@ -4,7 +4,6 @@ const Header = () => {
     const [btnName, setbtnName] = useState('Login')
     return (
         <div className="header">
-            {/*logo*/}
             <div className="logo-container">
                 <img className="logo" src={LOGO_URL}
                 />
@@ -22,7 +21,7 @@ const Header = () => {
                         {btnName}
                     </button>
                 </ul>
-            </div>
+            </div> 
             {/**navbar */}
         </div>
     )
