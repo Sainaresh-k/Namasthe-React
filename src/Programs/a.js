@@ -104,3 +104,16 @@
 
 // console.log(cal(5, 10, add))
 
+// let arr = [1, 2, 3, 4];
+// // function double(arr) {
+// //     return arr * 2;
+// // }
+// // const x = arr.map(double)
+// // console.log(x)
+// const double = arr.map((ele) => {
+//     return ele * 2
+// })
+// console.log(double)
+// const triple = arr.map((e) => e * 3)
+// console.log(triple)
+
