@@ -108,3 +108,19 @@ background-color: cadetblue;
   display: flex;
   gap: 10px;
 }
+.about-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.userClass-card {
+  padding: 10px;
+  border: 2px solid blue;
+  margin-bottom: 10px;
+}
+
+.user-card {
+  padding: 10px;
+  border: 2px solid rgb(230, 122, 21);
+  margin-top: 5px;
+}
