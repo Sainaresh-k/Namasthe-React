@@ -16,13 +16,16 @@ class About extends React.Component {
         super(props);
         console.log("parent constructor")
     }
+    componentDidMount() {
+        console.log("parent componentDidMount")
+    }
     render() {
         console.log("parent render")
         return (
             <div>
                 <h1>this is About Class parent component</h1>
-                <UserClass name={"Parent"}
-                    loc={"hyd"} />
+                <UserClass name={"first"} loc={"hyd"} />
+                <UserClass name={"second"} loc={"hyd"} />
             </div>
         )
     }
