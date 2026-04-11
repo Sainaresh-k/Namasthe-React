@@ -25,7 +25,6 @@ class About extends React.Component {
             <div>
                 <h1>this is About Class parent component</h1>
                 <UserClass name={"first"} loc={"hyd"} />
-                <UserClass name={"second"} loc={"hyd"} />
             </div>
         )
     }

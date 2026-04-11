@@ -1,33 +1,65 @@
 import React from "react";
+// class UserClass extends React.Component {
+//     constructor(props) {
+//         super(props)
+//         console.log(this.props.name + "child constructor")
+//         this.state = {
+//             count: 1,
+//             count2: 2,
+//         }
+//     };
+//     componentDidMount() {
+//         console.log(this.props.name + "child componentDidMount")
+//     }
+//     render() {
+//         console.log(this.props.name + "child render")
+//         const { name, loc } = this.props;
+//         // const { count, count2 } = this.state;
+//         const { count } = this.state;
+//         return (
+//             <div className="userClass-card">
+//                 {/* <h1>COUNT:{count}</h1>
+//                 <button onClick={() => {
+//                     this.setState(
+//                         { count: this.state.count + 1, }
+//                     )
+//                 }}>Increase</button>
+//                 <h1>COUNT2:{count2}</h1> */}
+
+//                 <h2>Name:{name}</h2>
+//                 <h3>Location: {loc}</h3>
+//                 <h3>Contact: ksn@gmail.com</h3>
+//             </div>
+//         );
+//     }
+// }
+// export default UserClass;
 class UserClass extends React.Component {
     constructor(props) {
-        super(props)
-        console.log(this.props.name + "child constructor")
+        super(props);
         this.state = {
-            count: 1,
-            count2: 2,
-        }
+            userInfo: {
+                name: "dummy",
+                location: "dummy",
+            },
+        };
+
     };
-    componentDidMount() {
-        console.log(this.props.name + "child componentDidMount")
+    async componentDidMount() {
+        //https://api.github.com/users/Sainaresh-k
+        const data = await fetch("https://api.github.com/users/Sainaresh-k");
+        const json = await data.json();
+        console.log(json)
+        this.setState({
+            userInfo: json,
+        })
     }
     render() {
-        console.log(this.props.name + "child render")
-        const { name, loc } = this.props;
-        // const { count, count2 } = this.state;
-        const { count } = this.state;
+        const { name, location } = this.state.userInfo;
         return (
             <div className="userClass-card">
-                {/* <h1>COUNT:{count}</h1>
-                <button onClick={() => {
-                    this.setState(
-                        { count: this.state.count + 1, }
-                    )
-                }}>Increase</button>
-                <h1>COUNT2:{count2}</h1> */}
-
                 <h2>Name:{name}</h2>
-                <h3>Location: {loc}</h3>
+                <h3>Location:{location}</h3>
                 <h3>Contact: ksn@gmail.com</h3>
             </div>
         );
