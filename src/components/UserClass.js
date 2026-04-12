@@ -41,25 +41,34 @@ class UserClass extends React.Component {
             userInfo: {
                 name: "dummy",
                 location: "dummy",
-                avatar_url: "https:avtar.com"
+                //avatar_url: "https:avtar.com"
             },
         };
 
     };
     async componentDidMount() {
-        //https://api.github.com/users/Sainaresh-k
-        const data = await fetch("https://api.github.com/users/Sainaresh-k");
-        const json = await data.json();
-        console.log(json)
-        this.setState({
-            userInfo: json,
-        })
+        // const data = await fetch("https://api.github.com/users/Sainaresh-k");
+        // const json = await data.json();
+        // console.log(json)
+        // this.setState({
+        //     userInfo: json,
+        // })
+        this.timer = setInterval(() => {
+            console.log("timer in ComponentDidMount")
+        }, 1000)
+    }
+    componentDidUpdate() {
+
+    }
+    componentWillUnmount() {
+        clearInterval(this.timer);
+        console.log("componentWill Unmount");
     }
     render() {
         const { name, location, avatar_url } = this.state.userInfo;
         return (
             <div className="userClass-card">
-                <img src={avatar_url} />
+                {/* <img src={avatar_url} /> */}
                 <h2>Name:{name}</h2>
                 <h3>Location:{location}</h3>
                 <h3>Contact: ksn@gmail.com</h3>
