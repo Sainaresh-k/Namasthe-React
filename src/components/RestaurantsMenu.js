@@ -1,24 +1,12 @@
 import { useState, useEffect } from "react";
 import mockMenuData from "../utils/mockData";
+import { useParams } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const RestaurantsMenu = () => {
-    const [resInfo, setResInfo] = useState(null);
 
-    useEffect(() => {
-        fetchMenu();
-    }, []);
-
-    const fetchMenu = () => {
-        const cards = mockMenuData?.data?.cards;
-
-        const restaurantCard = cards.find((item) => {
-            return item?.card?.card?.info;
-        });
-
-        const restaurantInfo = restaurantCard?.card?.card?.info;
-
-        setResInfo(restaurantInfo);
-    };
+    const { resId } = useParams();
+    const resInfo = useRestaurantsMenu(resId);
 
     if (resInfo === null) {
         return <h1>Loading...</h1>;

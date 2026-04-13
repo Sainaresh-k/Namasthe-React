@@ -1,7 +1,15 @@
 import { CDN_URL } from "../utils/constants"
+import useOnlineStatus from "../utils/useOnlineStatus";
+
+
 const RestaurantCard = ({ resData }) => {
     const { name, cloudinaryImageId, avgRating, cuisines } = resData;
     const { sla } = resData;
+    const onlineStatus = useOnlineStatus();
+    if (onlineStatus === false) {
+        return
+        <h2>Check internet connection</h2>
+    }
     return (
         <div className="res-cards">
 
