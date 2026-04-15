@@ -11,23 +11,21 @@ const RestaurantCard = ({ resData }) => {
         <h2>Check internet connection</h2>
     }
     return (
-        <div className="res-cards">
-
+        <div className="p-2 w-60 h-80 bg-gray-100 rounded-lg flex flex-col">
             <img
-                className="res-logo"
+                className="w-full h-40 rounded-lg object-cover"
                 alt="res-logo"
-                src={
-                    CDN_URL + cloudinaryImageId
-                }
+                src={CDN_URL + cloudinaryImageId}
             />
 
-            <div className="res-info">
-                <h4>{name}</h4>
-                <h5>{cuisines.join(", ")}</h5>
+            <div className="mt-2">
+                <h4 className="font-bold truncate">{name}</h4>
+                <h5 className="text-sm truncate">
+                    {cuisines.join(", ")}
+                </h5>
                 <h5>{avgRating} ⭐</h5>
                 <h5>{sla.deliveryTime} minutes</h5>
             </div>
-
         </div>
     );
 };
