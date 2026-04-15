@@ -124,13 +124,14 @@ import Shimmer from './Shimmer'
 // export default Body;
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withHeader } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 
 function Body() {
     const [allRestaurants, setAllRestaurants] = useState([]);
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [searchText, setSearchText] = useState("");
+    const RestaurantCardHeader = withHeader(RestaurantCard);
 
     useEffect(() => {
         fetchData();
@@ -202,7 +203,12 @@ function Body() {
                         to={"/restaurants/" + res.id}
                         style={{ textDecoration: "none", color: "inherit" }}
                     >
-                        <RestaurantCard resData={res} />
+                        {
+                            res.avgRating > 4.2 ? (
+                                <RestaurantCardHeader resData={res} />) :
+                                <RestaurantCard resData={res} />
+                        }
+
                     </Link>
                 ))}
             </div>

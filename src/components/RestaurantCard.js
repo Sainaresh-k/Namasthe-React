@@ -7,11 +7,10 @@ const RestaurantCard = ({ resData }) => {
     const { sla } = resData;
     const onlineStatus = useOnlineStatus();
     if (onlineStatus === false) {
-        return
-        <h2>Check internet connection</h2>
+        return <h2>Check internet connection</h2>
     }
     return (
-        <div className="p-2 w-60 h-80 bg-gray-100 rounded-lg flex flex-col">
+        <div className="p-2 w-60 h-80 bg-gray-100 hover:bg-amber-200 rounded-lg flex flex-col">
             <img
                 className="w-full h-40 rounded-lg object-cover"
                 alt="res-logo"
@@ -29,4 +28,14 @@ const RestaurantCard = ({ resData }) => {
         </div>
     );
 };
+export const withHeader = (RestaurantCard) => {
+    return (props) => {
+        return (
+            <div>
+                <label className="m-2 p-1 rounded-sm absolute bg-black text-white">Top Rated</label>
+                <RestaurantCard {...props} />
+            </div>
+        )
+    }
+}
 export default RestaurantCard;
