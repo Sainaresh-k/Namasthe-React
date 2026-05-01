@@ -2,6 +2,7 @@ import User from "./User"
 import React from "react"
 import UserClass from "./UserClass"
 const About = () => {
+    
     return (
         <div className="about-container">
             <h2>this is About page</h2>

@@ -40,7 +40,7 @@ import RestaurantCard from "./RestaurantCard";
 //     )
 // }
 // export default Body;
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from './Shimmer'
 
@@ -126,6 +126,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import RestaurantCard, { withHeader } from "./RestaurantCard";
 import Shimmer from "./Shimmer";
+import UserContext from "../utils/UserContext";
 
 function Body() {
     const [allRestaurants, setAllRestaurants] = useState([]);
@@ -153,6 +154,7 @@ function Body() {
         setAllRestaurants(restList);
         setFilteredRestaurants(restList);
     };
+    const { loggedInUser, setUserName } = useContext(UserContext)
 
     return filteredRestaurants.length === 0 ? (
         <Shimmer />
@@ -193,6 +195,10 @@ function Body() {
                     >
                         Top Rated Restaurants
                     </button>
+                    <label>Username</label>
+                    <input className=" p-2 border border-2" type="text"
+                        value={loggedInUser}
+                        onChange={(e) => setUserName(e.target.value)} />
                 </div>
             </div>
 
